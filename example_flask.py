@@ -14,7 +14,7 @@ def addflask(value,value2):
     return sum
 
 @app.route("/subtract/<value>-<value2>")
-def addflask(value,value2):
+def subtractflask(value,value2):
     dif=calc.subtract(int(value), int(value2))
     with open("/home/output/test.txt", "a") as f:
         f.write("suma lui {} - {} = {}".format(value,value2,dif))
@@ -22,7 +22,7 @@ def addflask(value,value2):
     return dif
 
 @app.route("/multiply/<value>*<value2>")
-def addflask(value,value2):
+def multiplyflask(value,value2):
     prod=calc.multiply(int(value), int(value2))
     with open("/home/output/test.txt", "a") as f:
         f.write("suma lui {} * {} = {}".format(value,value2,prod))
@@ -30,7 +30,7 @@ def addflask(value,value2):
     return prod
 
 @app.route("/divide/<value>/<value2>")
-def addflask(value,value2):
+def divideflask(value,value2):
     div=calc.divide(int(value), int(value2))
     with open("/home/output/test.txt", "a") as f:
         f.write("suma lui {} / {} = {}".format(value,value2,div))
